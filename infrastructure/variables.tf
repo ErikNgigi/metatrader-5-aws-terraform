@@ -8,9 +8,9 @@ variable "public_subnet_cidr_1" {
   type        = string
 }
 
-variable "public_subnet_cidr_2" {
-  description = "The public CIDR block for the second subnet"
-}
+# variable "public_subnet_cidr_2" {
+#   description = "The public CIDR block for the second subnet"
+# }
 
 variable "az-1" {
   description = "1st availability zone to distribute across subnets"

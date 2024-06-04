@@ -5,6 +5,6 @@ output "metatrader_sg" {
 
 output "ssh_key" {
   description = "output value of the ssh key stored locally"
-  value       = aws_key_pair.ssh_key.public_key
+  value       = aws_key_pair.ssh_key.id
   sensitive   = true
 }

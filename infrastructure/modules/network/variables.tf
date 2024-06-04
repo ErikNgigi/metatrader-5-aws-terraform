@@ -6,9 +6,9 @@ variable "public_cidr_subnet_1" {
   description = "1st public subnet CIDR imported value from the root variables file"
 }
 
-variable "public_cidr_subnet_2" {
-  description = "2nd public subnet CIDR imported value from the root variables file"
-}
+# variable "public_cidr_subnet_2" {
+#   description = "2nd public subnet CIDR imported value from the root variables file"
+# }
 
 variable "az-1" {
   description = "availability zones imported value from the root variables file"
@@ -34,11 +34,11 @@ variable "public_subnet_name_1" {
   default     = "metatrader_5_public_subnet_1"
 }
 
-variable "public_subnet_name_2" {
-  description = "name of the 2nd  subnet for the vpc"
-  type        = string
-  default     = "metatrader_5_public_subnet_2"
-}
+# variable "public_subnet_name_2" {
+#   description = "name of the 2nd  subnet for the vpc"
+#   type        = string
+#   default     = "metatrader_5_public_subnet_2"
+# }
 
 variable "igw_name" {
   description = "name of the internet gateway for the vpc"
