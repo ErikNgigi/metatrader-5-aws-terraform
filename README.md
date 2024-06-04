@@ -15,7 +15,7 @@ The architecture includes the following key components:
 5. **S3 Bucket**: For storing backups, logs, and other essential data.
 6. **CloudWatch**: For monitoring and alerting, ensuring the system's health and performance are continuously tracked.
 
-![image-alpha](files/metatrader-5-architecture.png)
+![image-alpha](files/images/metatrader-5-architecture.png)
 
 ## Prerequisites
 To get started with this project, ensure you have the following prerequisites:
