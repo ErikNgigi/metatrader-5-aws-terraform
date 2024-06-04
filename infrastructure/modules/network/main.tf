@@ -1,3 +1,4 @@
+# main vpc
 resource "aws_vpc" "metatrader_5_vpc" {
   cidr_block       = var.vpc_cidr
   instance_tenancy = "default"
@@ -7,6 +8,7 @@ resource "aws_vpc" "metatrader_5_vpc" {
   }
 }
 
+# public subnets
 resource "aws_subnet" "metatrader_5_public_subnet_1" {
   vpc_id                  = aws_vpc.metatrader_5_vpc.id
   cidr_block              = var.public_cidr_subnet_1
@@ -29,6 +31,7 @@ resource "aws_subnet" "metatrader_5_public_subnet_2" {
   }
 }
 
+# internet gateway
 resource "aws_internet_gateway" "metatrader_5_igw" {
   vpc_id = aws_vpc.metatrader_5_vpc.id
 
@@ -37,6 +40,7 @@ resource "aws_internet_gateway" "metatrader_5_igw" {
   }
 }
 
+# route table and associations
 resource "aws_route_table" "metatrader_5_rt" {
   vpc_id = aws_vpc.metatrader_5_vpc.id
   route {
