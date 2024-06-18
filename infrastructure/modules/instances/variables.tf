@@ -10,8 +10,8 @@ variable "instance" {
 
 variable "instance_name" {
   description = "name of the metatrader ec2 instance"
-  type = string
-  default = "metatrader_5_web_server_1"
+  type        = string
+  default     = "metatrader_5_web_server_1"
 }
 
 variable "metatrader_5_sg" {

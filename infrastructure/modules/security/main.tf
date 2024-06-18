@@ -40,5 +40,5 @@ resource "aws_security_group" "metatrader_5_sg" {
 
 resource "aws_key_pair" "ssh_key" {
   key_name   = var.ssh_key_name
-  public_key = file("~/.ssh/metatrader-key.pub")
+  public_key = file("~/.ssh/metatrader.pub")
 }
