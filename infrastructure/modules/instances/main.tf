@@ -4,7 +4,7 @@ resource "aws_instance" "metatrader_instance_1" {
   security_groups = [var.metatrader_5_sg]
   subnet_id       = var.metatrader_public_subnet_1
   key_name        = var.metatrader_ssh_key
-  user_data       = file("~/Projects/Aws/terraform-projects/metatrader-5-aws-terraform/files/shell-scripts/install-metatrader-5.sh")
+  user_data       = file("${path.module}/scripts/extras.sh")
 
   tags = {
     Name = var.instance_name
