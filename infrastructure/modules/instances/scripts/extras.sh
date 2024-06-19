@@ -4,8 +4,12 @@
 sudo dpkg --add-architecture i386
 sudo apt update -y
 
+# set timezone
+sudo timedatectl set-timezone Africa/Nairobi
+sudo timedatectl set-ntp on
+
 # install prerequesite packages
-sudo apt install -y --no-install-recommends curl firefox git unzip wget xfce4 xfce4-goodies xrdp vim
+sudo apt install -y --no-install-recommends curl firefox git unzip wget vim
 
 # install wine prerequesites
 sudo mkdir -pm755 /etc/apt/keyrings
