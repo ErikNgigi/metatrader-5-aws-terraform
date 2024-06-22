@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
-# Disable prompt during installation
-export DEBAIN_FRONTEND=noninteractive
-echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections
-
 # Add sources to ubuntu instances
 sudo sed -i -E 's/^# deb-src /deb-src /g' /etc/apt/sources.list
 sudo dpkg --add-architecture i386
 
 # Add packages
 sudo apt update -y
-sudo apt install openssh-server sudo xrdp xorgxrdp xfce4 xfce4-terminal xdg-user-dir vim wget -y
+sudo apt install curl openssh-server sudo xrdp xorgxrdp xdg-user-dir xauth xubuntu-desktop vim wget -y
 
 # setup ssh x11 forwarding
 sudo sed -i 's/^#   ForwardX11 no/   ForwardX11 yes/g' /etc/ssh/ssh_config
@@ -26,8 +22,9 @@ sudo apt-get update -y
 sudo apt install --install-recommends winehq-stable -y
 
 # Start xrdp for remote desktop
-sudo service xrdp start
-sudo service xrdp restart
+sudo systemctl restart xrdp
+sudo systemctl enable xrdp
 
 # Create user directories
 sudo xdg-user-dirs-update
+sudo mkdir -p ~/.Xauthority
