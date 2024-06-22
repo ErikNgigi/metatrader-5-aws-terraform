@@ -6,7 +6,7 @@ sudo dpkg --add-architecture i386
 
 # Add packages
 sudo apt update -y
-sudo apt install curl openssh-server sudo xrdp xorgxrdp xdg-user-dir xauth xubuntu-desktop vim wget -y
+sudo apt install curl openssh-server sudo xdg-user-dir xfce4 xfce4-terminal vim wget -y
 
 # setup ssh x11 forwarding
 sudo sed -i 's/^#   ForwardX11 no/   ForwardX11 yes/g' /etc/ssh/ssh_config
@@ -20,11 +20,3 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-bui
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
 sudo apt-get update -y
 sudo apt install --install-recommends winehq-stable -y
-
-# Start xrdp for remote desktop
-sudo systemctl restart xrdp
-sudo systemctl enable xrdp
-
-# Create user directories
-sudo xdg-user-dirs-update
-sudo mkdir -p ~/.Xauthority
