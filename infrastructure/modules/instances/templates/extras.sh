@@ -6,7 +6,7 @@ sudo dpkg --add-architecture i386
 
 # Add packages
 sudo apt update -y
-sudo apt install curl openssh-server sudo xdg-user-dir xfce4 xfce4-terminal vim wget -y
+sudo apt install curl openssh-server sudo xdg-user-dir vim wget -y
 
 # setup ssh x11 forwarding
 sudo sed -i 's/^#   ForwardX11 no/   ForwardX11 yes/g' /etc/ssh/ssh_config

@@ -29,10 +29,10 @@ variable "az-3" {
 
 variable "ami" {
   description = "id value of the amazon machine image for the ec2"
-  type = string
+  type        = string
 }
 
 variable "instance" {
   description = "instance family applied to the ec2 instance"
-  type = string
+  type        = string
 }

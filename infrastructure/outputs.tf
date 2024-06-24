@@ -30,10 +30,10 @@
 
 output "metatrader_public_address" {
   description = "exported output value of the ec2 instance public ipv4 address"
-  value = module.aws_instances.metatrader_5_public_ip
+  value       = module.aws_instances.metatrader_5_public_ip
 }
 
 output "metatrader_public_dns" {
   description = "exported output value of the ec2 instance public ipv4 dns"
-  value = module.aws_instances.metatrader_5_public_dns
+  value       = module.aws_instances.metatrader_5_public_dns
 }
